@@ -28,9 +28,12 @@ namespace bhager1730ex1b
                 (Convert.ToDecimal(txtSubtotal.Text)    
                 * Convert.ToDecimal(txtDiscountPercent.Text) / 100).ToString("0.00");
 
-            txtTotal.Text = 
-                (Convert.ToDecimal(txtSubtotal.Text)    
+            txtTotal.Text =
+                (Convert.ToDecimal(txtSubtotal.Text)
                 - Convert.ToDecimal(txtDiscountAmount.Text)).ToString("0.00");
+
+            //"0.00" Formats output to keep cents to 2 decimals     
+            //Must convert strings to decimal and back to strings or 5 + 5 = 55 not 10
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
